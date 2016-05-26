@@ -75,11 +75,13 @@ set smartcase                   " no ignorecase if Uppercase char present
 "plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
   "------  NERDTree Options  ------
   "当打开vim且没有文件时自动打开NERDTree
-  autocmd vimenter * NERDTree
-  autocmd vimenter * if !argc(  )   | NERDTree | endif
+  " autocmd vimenter * NERDTree
+  " autocmd vimenter * if !argc() | NERDTree | endif
+  autocmd StdinReadPre * let s:std_in=1
+  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
   map <C-n> :NERDTreeToggle<CR>
 
@@ -140,6 +142,8 @@ Plug 'Shougo/neocomplcache'
   " Set minimum syntax keyword length.
   let g:neocomplcache_min_syntax_length = 3
   let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+  " tab 自动补全  
+  inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 call plug#end()
 
