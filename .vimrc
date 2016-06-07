@@ -30,8 +30,10 @@ set expandtab
 set backspace=2 
 
 "根据文件类型设置缩进格式 
-au FileType html,sh,yml,python,vim,javascript setl shiftwidth=2
-au FileType html,sh,yml,python,vim,javascript setl tabstop=2
+"shiftwidth: 用于程序中自动缩进所使用的空白长度指示
+"tabstop: 定义tab所等同的空格长度
+au FileType html,sh,yaml,yml,python,vim,javascript setl shiftwidth=2
+au FileType html,sh,yaml,yml,python,vim,javascript setl tabstop=2
 au FileType java,php setl shiftwidth=4
 au FileType java,php setl tabstop=4
 
