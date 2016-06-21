@@ -35,3 +35,7 @@
 		:PlugInstall
 		
 安装插件即可.
+
+**vim别名vi**
+
+                alias vi=vim
