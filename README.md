@@ -3,12 +3,28 @@
 
 ###vim 插件管理器: vim-plug
 
-**安装**
+####安装
 
 		mkdir -p ~/.vim/autoload
 		curl -fLo ~/.vim/autoload/plug.vim \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     
+####配置文件安装
+
+`.vimrc`放置到用户家目录中即可.
+		
+		cd ~
+		git clone https://github.com/chloroplast1983/vimrc.git 
+		cp vimrc/.vimrc ./  
+		
+####安装插件
+
+第一次打开因为已经配置了`.vimrc`,所以打开可能会报错.运行:
+
+		:PlugInstall
+		
+安装插件即可.
+
 **常用命令**
 
 * `PlugInstall [name ...] [#threads]`: 安装插件
@@ -28,13 +44,7 @@
 
 `ctags -R`: 表示递归创建,也就包括源代码根目录下的所有子目录下的源程序.
 
-###安装插件
 
-第一次打开因为已经配置了`.vimrc`,所以打开可能会报错.运行:
-
-		:PlugInstall
-		
-安装插件即可.
 
 **vim别名vi**
 
