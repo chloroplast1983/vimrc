@@ -1,15 +1,15 @@
 # vimrc
 
 
-###vim 插件管理器: vim-plug
+### vim 插件管理器: vim-plug
 
-####安装
+#### 安装
 
 		mkdir -p ~/.vim/autoload
 		curl -fLo ~/.vim/autoload/plug.vim \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     
-####配置文件安装
+#### 配置文件安装
 
 `.vimrc`放置到用户家目录中即可.
 		
@@ -17,7 +17,7 @@
 		git clone https://github.com/chloroplast1983/vimrc.git 
 		cp vimrc/.vimrc ./  
 		
-####安装插件
+#### 安装插件
 
 第一次打开因为已经配置了`.vimrc`,所以打开可能会报错.运行:
 
@@ -34,7 +34,7 @@
 * `PlugStatus`: 检查插件的状态
 * `PlugDiff`: 检查上次运行 `PlugUpdat` 的更新变化
 
-###ctags
+### ctags
 
 **安装**
 
